@@ -30,6 +30,9 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 # Device specific configs.
 $(call inherit-product, device/xiaomi/emerald/device.mk)
 
+# Inherit any OrangeFox-specific settings
+$(call inherit-product, $(DEVICE_PATH)/fox_emerald.mk)
+
 ## Device identifier. This must come after all inclusions.
 PRODUCT_DEVICE := emerald
 PRODUCT_NAME := twrp_emerald
